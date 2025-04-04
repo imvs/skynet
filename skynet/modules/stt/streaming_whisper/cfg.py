@@ -8,6 +8,7 @@ from skynet.env import (
     whisper_gpu_indices,
     whisper_model_name,
     whisper_model_path,
+    whisper_cpu_threads
 )
 from skynet.logs import get_logger
 
@@ -33,6 +34,7 @@ model = WhisperModel(
     device=device,
     device_index=gpu_indices,
     compute_type=whisper_compute_type,
+    cpu_threads=whisper_cpu_threads,
     num_workers=num_workers,
     download_root=whisper_model_path,
 )

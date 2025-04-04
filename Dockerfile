@@ -84,6 +84,7 @@ COPY --from=ffmpeg_builder /usr/local/include /usr/local/include
 COPY --from=ffmpeg_builder /copy_libs/ /usr/local/lib/
 COPY --from=ffmpeg_builder /usr/local/lib/pkgconfig /usr/local/lib/pkgconfig
 COPY --chown=jitsi:jitsi --from=builder /app/.venv /app/.venv
+COPY --chown=jitsi:jitsi skynet /app/skynet
 
 RUN \
     apt-get update && \
